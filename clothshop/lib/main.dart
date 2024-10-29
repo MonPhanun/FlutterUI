@@ -1,5 +1,6 @@
 import 'package:clothshop/routes/app_page.dart';
 import 'package:clothshop/routes/app_route.dart';
+import 'package:clothshop/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -15,11 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-            seedColor: const Color.fromARGB(255, 6, 124, 12)),
-        useMaterial3: true,
-      ),
+      theme: AppTheme.lightTheme,
       themeMode: ThemeMode.light,
       getPages: AppPage.list,
       initialRoute: AppRoute.dashboard,

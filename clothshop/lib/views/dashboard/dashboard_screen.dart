@@ -1,4 +1,5 @@
 import 'package:clothshop/controller/dashboard_controller.dart';
+import 'package:clothshop/views/home/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
 import 'package:get/get.dart';
@@ -17,15 +18,13 @@ class _DashboardScreenState extends State<DashboardScreen> {
       return Scaffold(
         appBar: AppBar(
           toolbarHeight: 0,
-          backgroundColor: const Color.fromARGB(255, 6, 124, 12),
+          backgroundColor: Colors.white,
         ),
         body: SafeArea(
           child: IndexedStack(
             index: controller.tabIndex,
             children: [
-              Container(
-                color: Colors.deepOrange[300],
-              ),
+              const HomePage(),
               Container(
                 color: Colors.deepPurple[300],
               ),
