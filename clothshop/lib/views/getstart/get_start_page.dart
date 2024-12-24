@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:clothshop/views/shimmerShare/shimmerImage/shimmer_image.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class GetStartPage extends StatefulWidget {
   const GetStartPage({super.key});
@@ -70,35 +71,45 @@ class _GetStartPageState extends State<GetStartPage> {
                     ),
                     Row(
                       children: [
-                        Container(
-                          height: 60,
-                          width: MediaQuery.of(context).size.width * .4,
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                              color: Colors.grey[300],
-                              borderRadius: BorderRadius.circular(12)),
-                          child: Text(
-                            'Sign In',
-                            style: TextStyle(
-                                fontSize: 18,
-                                color: Theme.of(context).primaryColor,
-                                fontWeight: FontWeight.bold),
+                        InkWell(
+                          onTap: () {
+                            Get.toNamed("/singin");
+                          },
+                          child: Container(
+                            height: 60,
+                            width: MediaQuery.of(context).size.width * .4,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                                color: Colors.grey[300],
+                                borderRadius: BorderRadius.circular(12)),
+                            child: Text(
+                              'Sign In',
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  color: Theme.of(context).primaryColor,
+                                  fontWeight: FontWeight.bold),
+                            ),
                           ),
                         ),
                         const Spacer(),
-                        Container(
-                          height: 60,
-                          width: MediaQuery.of(context).size.width * .4,
-                          decoration: BoxDecoration(
-                              color: Theme.of(context).primaryColor,
-                              borderRadius: BorderRadius.circular(12)),
-                          alignment: Alignment.center,
-                          child: const Text(
-                            'Get Start',
-                            style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w500),
+                        InkWell(
+                          onTap: () {
+                            Get.toNamed("/singup");
+                          },
+                          child: Container(
+                            height: 60,
+                            width: MediaQuery.of(context).size.width * .4,
+                            decoration: BoxDecoration(
+                                color: Theme.of(context).primaryColor,
+                                borderRadius: BorderRadius.circular(12)),
+                            alignment: Alignment.center,
+                            child: const Text(
+                              'Get Start',
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w500),
+                            ),
                           ),
                         )
                       ],

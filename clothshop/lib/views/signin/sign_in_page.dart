@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({super.key});
@@ -259,10 +260,15 @@ class _SignInPageState extends State<SignInPage> {
                         style:
                             TextStyle(color: Color.fromARGB(255, 104, 94, 94)),
                       ),
-                      Text(
-                        " Sign up",
-                        style: TextStyle(color: Theme.of(context).primaryColor),
-                      ),
+                      TextButton(
+                          onPressed: () {
+                            Get.toNamed("/singup");
+                          },
+                          child: Text(
+                            " Sign up",
+                            style: TextStyle(
+                                color: Theme.of(context).primaryColor),
+                          )),
                     ],
                   ),
                 ),

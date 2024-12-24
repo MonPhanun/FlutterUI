@@ -1,4 +1,5 @@
 import 'package:clothshop/controller/dashboard_controller.dart';
+import 'package:clothshop/views/favorite/favorite_page.dart';
 import 'package:clothshop/views/home/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
@@ -25,9 +26,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             index: controller.tabIndex,
             children: [
               const HomePage(),
-              Container(
-                color: Colors.deepPurple[300],
-              ),
+              const FavoritePage(),
               Container(
                 color: Colors.deepOrange[700],
               ),
